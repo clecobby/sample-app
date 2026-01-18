@@ -4,6 +4,7 @@ steps:
     env: ['GOPATH=/gopath']
     args: ['build', '-o', 'main', 'main.go']
 
+
   # Step 2: Build the Docker image for the Go application
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'europe-west1-docker.pkg.dev/qwiklabs-gcp-04-7c53bbff90dc/my-repository/hello-cloudbuild-dev:v1.0', '.']
